@@ -77,7 +77,7 @@ make_up <- function() {
 }
 
 stop_es_version <- function(ver_check, fxn) {
-  ver <- as.numeric(gsub("\\.", "", info()$version$number))
+  ver <- as.numeric(gsub("\\.", "", info()$version))
   if (ver < ver_check) {
     stop(fxn, " is not available for this Elasticsearch version", call. = FALSE)
   }
